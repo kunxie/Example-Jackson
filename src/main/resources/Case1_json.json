@@ -1,0 +1,6 @@
+{
+  "string_attribute_1": "value1",
+  "num_attribute": 1234,
+  "string_object_attribute": "[{\"attr_x\":\"value1\",\"attr_y\":1234},{\"attr_x\":\"value2\",\"attr_y\":234567}]",
+  "attribute_be_ignored": "test-test-test-test"
+}
