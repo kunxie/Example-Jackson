@@ -7,14 +7,16 @@ import com.fasterxml.jackson.databind.util.StdConverter;
 
 import java.util.List;
 
-public class PayloadConverter extends StdConverter<String, List<Case1Pojo.Payload>> {
+public class PayloadDeserializerConverter extends StdConverter<String, List<Case1Pojo.Payload>> {
+
+  private static final ObjectMapper objectMapper = new ObjectMapper();
   @Override
   public List<Case1Pojo.Payload> convert(String value) {
     try {
-      return (new ObjectMapper()).readValue(value, new TypeReference<List<Case1Pojo.Payload>>() {});
+      return objectMapper.readValue(value, new TypeReference<List<Case1Pojo.Payload>>() {});
     }
     catch (JsonProcessingException ex) {
-      System.err.println("unable to process the payload: " + value);
+      System.err.println("unable to process the String: " + value);
       return null;
     }
   }

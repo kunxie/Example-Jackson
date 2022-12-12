@@ -21,5 +21,9 @@ class Case1 {
     Case1Pojo pojo = objectMapper.readValue(jsonString, new TypeReference<Case1Pojo>() {});
     System.out.println("pojo: ----------");
     System.out.println(pojo);
+
+    String serializedString = objectMapper.writeValueAsString(pojo);
+    System.out.println("serializedString: ----------");
+    System.out.println(serializedString);
   }
 }
