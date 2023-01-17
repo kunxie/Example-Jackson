@@ -25,7 +25,7 @@ public class Case4 {
     String arrayPerson = forJsonString(arrayPath);
     System.out.println("jsonString: ----------");
     System.out.println(arrayPerson);
-    List<Case4Pojo> arrayResult = objectMapper.readValue(arrayPerson, new TypeReference<List<Case4Pojo>>() {});
+    Case4Pojo arrayResult = objectMapper.readValue(arrayPerson, Case4Pojo.class);
     System.out.println("arrayResult: ----------");
     System.out.println(arrayResult);
     System.out.println("serialized arrayResult: ----------");
@@ -34,7 +34,7 @@ public class Case4 {
     String objectPerson = forJsonString(objectPath);
     System.out.println("jsonString: ----------");
     System.out.println(objectPerson);
-    List<Case4Pojo> objectResult = objectMapper.readValue(objectPerson, new TypeReference<List<Case4Pojo>>() {});
+    Case4Pojo objectResult = objectMapper.readValue(objectPerson, Case4Pojo.class);
     System.out.println("objectResult: ----------");
     System.out.println(objectResult);
     System.out.println("serialized objectResult: ----------");
