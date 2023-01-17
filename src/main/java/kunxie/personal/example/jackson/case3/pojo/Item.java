@@ -1,4 +1,4 @@
-package kunxie.personal.example.jackson.case3.models;
+package kunxie.personal.example.jackson.case3.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
