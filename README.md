@@ -35,3 +35,61 @@ json string <--> `Map<String, List<String>>`
 ```
 
 target Java format should be `Map<String, String>`
+
+## case 4
+
+process JSON array and JSON object at the same time (treat JSON object as the only element of JSON array)
+
+### source json
+
+```json
+{
+  "person": {
+    "name": "jack",
+    "gender": "male"
+  }
+}
+```
+
+```json
+{
+  "person": [
+    {
+      "name": "Mike",
+      "gender": "male"
+    },
+    {
+      "name": "Jane",
+      "gender": "female"
+    }
+  ]
+}
+```
+
+### target json
+
+```json
+{
+  "person": [
+    {
+      "name": "jack",
+      "gender": "male"
+    }
+  ]
+}
+```
+
+```json
+{
+  "person": [
+    {
+      "name": "Mike",
+      "gender": "male"
+    },
+    {
+      "name": "Jane",
+      "gender": "female"
+    }
+  ]
+}
+```

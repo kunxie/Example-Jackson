@@ -3,7 +3,7 @@ package kunxie.personal.example.jackson.case3;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import kunxie.personal.example.jackson.case3.models.Item;
+import kunxie.personal.example.jackson.case3.pojo.Item;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
